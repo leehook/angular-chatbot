@@ -1,0 +1,19 @@
+<div class="header">
+  <div class="logo"></div>
+  <h1 class="titolo">Assistente NFC</h1>
+</div>
+<div class="chatbody">
+  <ng-container *ngFor="let message of messages | async">
+    <div class="message custommessage" [ngClass]="{ 'from': message.sentBy === 'bot',
+	                                    'to':   message.sentBy === 'user' }">
+      <div [innerHTML]="message.content | safe: 'html'"></div>
+    </div>
+  </ng-container>  
+  <input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text" class="tuomessaggio" placeholder="Digita il tuo messaggio">
+  <span (click)="activateSpeechSearchMovie()">    
+    <span class="microfono"></span>
+    <img *ngIf="showSpeechButton" src="/assets/images/mic-on.png" class="microfono" />
+    <img *ngIf="!showSpeechButton" src="/assets/images/mic-off.png" class="microfono" />
+  </span>
+  <button (click)="sendMessage()" [disabled]="!formValue.length">Invia</button>
+</div>

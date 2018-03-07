@@ -1,0 +1,112 @@
+.message {
+    border-radius: 20px;
+    margin: 0 10px 10px;
+    position: relative;
+    font-weight: bold;
+}
+
+.message.to {
+    //background-color: #81cbd6;
+    background-color: #21a0b3;
+    color: white;
+    margin-left: 5%;
+    text-align: right;
+}
+
+.message.from {
+    background-color: #a90433;
+    color: white;
+    margin-right: 5%;
+}
+
+.message.to+.message.to, .message.from+.message.from {
+    margin-top: -10px;
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    background-color: #25b728;
+    border: 0.1rem solid #205031;
+}
+
+.button:focus, .button:hover, button:focus, button:hover, input[type='button']:focus, input[type='button']:hover, input[type='reset']:focus, input[type='reset']:hover, input[type='submit']:focus, input[type='submit']:hover {
+    background-color: #fff;
+    border-color: #25b728;
+    color: #25b728;
+    outline: 0
+}
+
+input[type='email']:focus, input[type='number']:focus, input[type='password']:focus, input[type='search']:focus, input[type='tel']:focus, input[type='text']:focus, input[type='url']:focus, textarea:focus, select:focus {
+    border: 0.1rem solid #205031;
+}
+
+.logo {
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/itas_logo.png');
+    margin-bottom: 20px;
+    background-size: contain;
+    width: 100%;
+    background-color: #a90433;
+    background-position-x: right;
+}
+
+.titolo {
+    text-align: center;
+    font-weight: bold;
+}
+
+.header {
+    width: 100%;
+}
+
+.chatbody {
+}
+
+.custommessage {
+    font-weight: normal;
+}
+
+.microfono {
+    height: 25px;
+    width: 20px;
+    cursor: pointer;    
+    vertical-align: middle;
+}
+
+@media screen and (min-width:768px) {
+    .tuomessaggio {
+        width: 82%;
+        margin-right: 1%;
+    }
+
+    .message {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .tuomessaggio {
+        width: 70%;
+        margin-right: 1%;
+        margin-left: 1%;
+        margin-top: 20px;
+    }
+
+    .message {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+        height: 3.5rem;
+        line-height: 3.5rem;
+    }
+
+}

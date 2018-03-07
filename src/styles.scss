@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+a {
+	color: #0bd62f !important;
+}
+.itas-button {
+    background-color: #121212 !important;
+    color: white !important;
+}
+@media screen and (min-width:768px) {
+	.row .column.column-50 {
+		max-width: 50%;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	.row .column.column-50 {
+		max-width: 100%;
+	}
+
+	h1 {
+		font-size: 3.0rem;
+	}
+
+}
